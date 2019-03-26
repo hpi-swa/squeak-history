@@ -6,7 +6,7 @@ resetCacheForMailMessages
 	
 	self messagesNormalizedDo: [:mailMessage :listName |
 		CachedMessages add: (
-			(MailmanMailMessage from: mailMessage)
+			(SqhMailWrapper from: mailMessage)
 				setProperty: #listName toValue: listName;
 				setProperty: #dateAndTime toValue: (mailMessage fields at: 'squeak-date');
 				setProperty: #mailAddress toValue: (mailMessage fields at: 'squeak-mail-address');
