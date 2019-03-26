@@ -1,0 +1,20 @@
+{
+	"class" : {
+		"on:" : "mt 2/5/2019 15:26",
+		"onFileNamed:" : "mt 2/5/2019 17:52" },
+	"instance" : {
+		"allMessages" : "mt 2/7/2019 17:19",
+		"atEnd" : "mt 2/7/2019 17:19",
+		"fileName" : "mt 3/22/2019 15:16",
+		"getChunkFrom:to:" : "mt 3/22/2019 14:59",
+		"getMessageFrom:to:" : "mt 3/22/2019 15:48",
+		"isNextLineSeparator" : "mt 2/5/2019 16:25",
+		"nextChunk" : "mt 3/22/2019 15:07",
+		"nextLine" : "mt 2/5/2019 16:00",
+		"nextLines:" : "mt 2/5/2019 16:00",
+		"nextMessage" : "mt 3/22/2019 15:11",
+		"on:" : "mt 2/5/2019 15:26",
+		"peekLine" : "mt 2/5/2019 15:57",
+		"peekLines:" : "mt 2/5/2019 15:58",
+		"reset" : "mt 2/5/2019 16:29",
+		"skipSeparator" : "mt 3/22/2019 15:01" } }

@@ -1,0 +1,18 @@
+{
+	"category" : "SqueakHistory-MailingLists",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"ArchiveFileStreams" ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"fileName",
+		"fileStart",
+		"fileEnd",
+		"mailMessage",
+		"properties" ],
+	"name" : "SqhMailWrapper",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

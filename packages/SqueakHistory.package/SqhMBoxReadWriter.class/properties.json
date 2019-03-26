@@ -1,0 +1,16 @@
+{
+	"category" : "SqueakHistory-MailingLists",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "mt 2/5/2019 15:25",
+	"instvars" : [
+		"stream",
+		"lastStart",
+		"lastEnd" ],
+	"name" : "SqhMBoxReadWriter",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
