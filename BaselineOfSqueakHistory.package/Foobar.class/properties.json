@@ -1,0 +1,14 @@
+{
+	"category" : "BaselineOfSqueakHistory",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "Foobar",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
