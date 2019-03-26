@@ -1,1 +1,0 @@
-Convert MailMessage to and from mbox format.

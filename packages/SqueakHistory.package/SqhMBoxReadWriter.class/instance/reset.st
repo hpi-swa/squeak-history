@@ -1,4 +1,0 @@
-streaming
-reset
-
-	stream reset.

@@ -1,4 +1,0 @@
-accessing
-fileEnd
-
-	^ fileEnd

@@ -1,1 +1,0 @@
-I am a wrapper for cached access to mail messages on mailman mailing list archives.
