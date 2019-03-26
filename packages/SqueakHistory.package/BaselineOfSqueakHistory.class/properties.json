@@ -1,0 +1,14 @@
+{
+	"category" : "SqueakHistory",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "BaselineOfSqueakHistory",
+	"pools" : [
+		 ],
+	"super" : "BaselineOf",
+	"type" : "normal" }

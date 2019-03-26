@@ -1,0 +1,21 @@
+{
+	"category" : "SqueakHistory-MailingLists",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"ArchivePath",
+		"CachedMessages",
+		"RulesForAuthorKeyNormalizationDerived" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"mailingLists",
+		"showProgress",
+		"logOnTranscript",
+		"authorInitials",
+		"rulesForAuthorKeyNormalization",
+		"rulesForAuthorKeyClarification" ],
+	"name" : "SqhMailmanAggregator",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
