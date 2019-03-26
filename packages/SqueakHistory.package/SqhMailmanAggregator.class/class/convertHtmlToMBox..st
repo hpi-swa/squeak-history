@@ -14,7 +14,7 @@ convertHtmlToMBox: htmlContent
 		end := htmlContent findString: '</h2>' startingAt: start+1 caseSensitive: false.
 		end = 0 ifTrue: [Error signal: 'Cannot find end of subject line!']].
 	subject := (htmlContent copyFrom: start+1 to: end-1) withBlanksTrimmed.
-	subject := subject unescapeEntities. "Vivide only"
+	subject := self class unescapeEntitiesIn: subject.
 	
 	"2) Find 'from' "
 	start := htmlContent findString: '<b>' startingAt: end+5 caseSensitive: false.
@@ -30,7 +30,7 @@ convertHtmlToMBox: htmlContent
 	mail := mail
 		copyFrom: (mail findLastOccurrenceOfString: '>' startingAt: 1) + 1
 		to: mail size.
-	mail := mail unescapeEntities. "Vivide only"
+	mail := self class unescapeEntitiesIn: mail.
 	mail := mail copyWithoutAll: '"'. "&quot;sv04er502&quot; at sneakemail.com" 
 
 	"3) Find 'date' "
@@ -56,7 +56,7 @@ convertHtmlToMBox: htmlContent
 	start := htmlContent findString: '<pre>' startingAt: end+4 caseSensitive: false.
 	end := htmlContent findString: '</pre>' startingAt: start+5 caseSensitive: false.
 	body := htmlContent copyFrom: start+5 to: end-1.
-	body := body unescapeEntities. "Vivide only"
+	body := self class unescapeEntitiesIn: body.
 	body := body copyReplaceAll: '<i>' with: ''.
 	body := body copyReplaceAll: '</i>' with: ''.
 	
