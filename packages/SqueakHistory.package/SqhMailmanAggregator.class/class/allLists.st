@@ -9,5 +9,5 @@ allLists
 		'http://lists.squeakfoundation.org/pipermail/vm-beginners/' -> 'vm-beginners'.
 		'http://lists.squeakfoundation.org/pipermail/etoys-dev/' -> 'etoys-dev'.
 		'http://lists.squeakfoundation.org/pipermail/squeakland/' -> 'squeakland'.
-		'http://cuis-smalltalk.org/pipermail/cuis-dev_cuis-smalltalk.org/' -> 'cuis'
+		'http://cuis-smalltalk.org/pipermail/cuis-dev_cuis-smalltalk.org/' -> 'cuis-dev'
 	}, {self urlOfTweak -> 'tweak'}
