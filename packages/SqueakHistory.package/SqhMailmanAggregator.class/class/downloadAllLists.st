@@ -2,9 +2,9 @@ preparation
 downloadAllLists
 	"self downloadAllLists."
 	
-	self urlsOfLists
-		do: [:url |
+	(self allLists reject: [:spec | spec value = 'tweak'])
+		do: [:spec |
 			self
-				downloadListFrom: url
+				downloadListFrom: spec
 				to: self archivePath]
 		displayingProgress: [:url | url].

@@ -1,7 +1,7 @@
 preparation
-downloadListFrom: urlToPiper to: localPath
+downloadListFrom: spec to: localPath
 
 	self
-		downloadList: (urlToPiper findTokens: '/') last
-		from: urlToPiper
+		downloadList: spec value
+		from: spec key
 		to: localPath.

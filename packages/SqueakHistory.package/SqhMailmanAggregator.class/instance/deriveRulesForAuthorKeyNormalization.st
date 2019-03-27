@@ -3,7 +3,7 @@ deriveRulesForAuthorKeyNormalization
 
 	| firstLevel secondLevel thirdLevel fourthLevel result |
 	RulesForAuthorKeyNormalizationDerived := Dictionary new.
-	firstLevel := self aggregateMailAddresses.
+	firstLevel := self aggregateMailAddressesUncached.
 
 	"1) Discard one-item lists."
 	secondLevel := OrderedCollection new: 500.
