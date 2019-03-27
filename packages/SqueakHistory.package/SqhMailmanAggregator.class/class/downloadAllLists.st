@@ -7,4 +7,4 @@ downloadAllLists
 			self
 				downloadListFrom: spec
 				to: self archivePath]
-		displayingProgress: [:url | url].
+		displayingProgress: [:spec | spec value].
