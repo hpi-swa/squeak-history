@@ -5,7 +5,8 @@ rulesForAuthorKeyNormalization
 		'alanckay' -> 'alancurtiskay'.
 		'alankay' -> 'alancurtiskay'.
 		'analgrimes' -> 'alangrimes'.
-
+		'akgrant' -> 'alistairgrant'.
+		
 		'aaron' -> 'aaronreichow'.
 		'blake' -> 'blakewatson'.
 		
@@ -60,6 +61,9 @@ rulesForAuthorKeyNormalization
 		'johnm' -> 'johnmaloney'.
 		'johnreedmaffeorlpa' -> 'johnreedmaffeo'.
 		'johnreedxmaffeo' -> 'johnreedmaffeo'.
+		'jrmaffeo' -> 'johnreedmaffeo'.
+		
+		'vuletich' -> 'juanmanuelvuletich'.
 
 		'deepcovelabsyvrjoergbeekmann' -> 'joergbeekmann'.
 		'deepcovelabsjoergbeekmann' -> 'joergbeekmann'.
@@ -113,9 +117,11 @@ rulesForAuthorKeyNormalization
 		'commitsatsqueakvmorg' -> 'mailmancommits'.
 		'commitsatetoyssqueakorg' -> 'mailmancommits'.
 		
-		'squeakdev' -> 'mailmanother'.
-		'squeakdevnoreply' -> 'mailmanother'.
-		'squeakdevnoreplyatlistssqueakfoundationorg' -> 'mailmanother'.
+		'zarroboogsperchild' -> 'bugtracker'. "for laptop.org"
+		
+		"'squeakdev' -> 'mailmanother'." "See alanreider in authory-key clarification."
+		'squeakdevnoreply' -> 'mailmanother'. "mailmancommits ???"
+		'squeakdevnoreplyatlistssqueakfoundationorg' -> 'mailmanother'. "mailmancommits ???"
 		'mailerdeamon' -> 'mailmanother'. "???"
 		'squeakdevpris' -> 'mailmanspam'.
 

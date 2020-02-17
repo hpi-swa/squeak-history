@@ -14,3 +14,20 @@ resetCacheForMailMessages
 				setProperty: #authorKey toValue: (mailMessage fields at: 'squeak-author-key');
 				setProperty: #authorFullName toValue: (mailMessage fields at: 'squeak-author-fullname');
 				yourself)].
+			
+	"Sort messages from new to old."
+	CachedMessages sort: [:a :b | a dateAndTime >= b dateAndTime].
+
+	"Remove duplicates. Those are some Mailman quirks."
+	CachedMessages in: [:messages |
+		| duplicates |
+		duplicates := OrderedCollection new.
+		messages overlappingPairsDo: [:a :b |
+			(a dateAndTime = b dateAndTime "We just sorted those messages."
+				and: [a messageId = b messageId
+				and: [a listName = b listName "Cross-list postings are no duplicates."]])
+					ifTrue: [duplicates add: b]].
+
+		self flag: #todo. "mt: There are also duplicates with different timestamps in the same list. Mailman will log those messages repeatedly. However, it would take more time to detect those duplicates."
+				
+		CachedMessages removeAll: duplicates].

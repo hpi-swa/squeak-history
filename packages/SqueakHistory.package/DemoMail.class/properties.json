@@ -1,0 +1,14 @@
+{
+	"category" : "SqueakHistory-Model",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"wrapper" ],
+	"name" : "DemoMail",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

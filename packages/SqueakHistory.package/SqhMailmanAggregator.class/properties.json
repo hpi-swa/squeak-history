@@ -4,6 +4,7 @@
 		 ],
 	"classvars" : [
 		"ArchivePath",
+		"CachedConversations",
 		"CachedMessages",
 		"RulesForAuthorKeyNormalizationDerived" ],
 	"commentStamp" : "",

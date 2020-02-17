@@ -142,6 +142,8 @@ rulesForAuthorKeyClarification
 		'squeak@ajr.e4ward.com' -> ('squeak' -> 'alanreider').
 		'ajr@e4ward.com' -> ('ajr' -> 'alanreider').
 		'gmane-x9y9abu9r8@ajr.e4ward.com' -> ('ajr' -> 'alanreider').
+		'squeakdev@reider.net' -> ('squeakdev' -> 'alanreider').
+		'squeakdev1@reider.net' -> ('squeakdev1' -> 'alanreider').
 		'ly4aegw02@sneakemail.com' -> ('ajr' -> 'alanreider'). "!!!"
 "		'sstnjpm02@sneakemail.com' ??? alanreider ???"
 		

@@ -1,0 +1,15 @@
+{
+	"class" : {
+		"named:" : "mt 1/9/2020 11:35" },
+	"instance" : {
+		"aggregateSenders" : "mt 1/11/2020 15:47",
+		"allConversations" : "mt 1/10/2020 16:24",
+		"allMails" : "mt 1/9/2020 18:03",
+		"conversationsFromTheLast:" : "mt 1/10/2020 16:28",
+		"lastMail" : "mt 1/10/2020 16:49",
+		"mailsFrom:" : "mt 1/11/2020 15:52",
+		"mailsFromTheLast:" : "mt 1/10/2020 10:40",
+		"markAllUnread" : "mt 1/10/2020 10:37",
+		"name" : "mt 1/9/2020 11:34",
+		"name:" : "mt 1/9/2020 11:34",
+		"size" : "mt 1/10/2020 16:47" } }

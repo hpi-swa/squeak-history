@@ -1,0 +1,16 @@
+{
+	"category" : "SqueakHistory-Model",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"KnownPersons" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"fullNames",
+		"mailAddresses",
+		"preferredName" ],
+	"name" : "DemoPerson",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -1,0 +1,15 @@
+{
+	"category" : "SqueakHistory-Model",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"wrappers",
+		"starter" ],
+	"name" : "DemoConversation",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

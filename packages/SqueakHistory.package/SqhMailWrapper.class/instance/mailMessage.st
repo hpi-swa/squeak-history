@@ -1,4 +1,4 @@
-as yet unclassified
+accessing - raw
 mailMessage
 
 	self flag: #todo. "mt: Use inst var mailMessage as cache."

@@ -1,4 +1,4 @@
-as yet unclassified
+accessing - domain
 authorInitials
 
 	^ self valueOfProperty: #authorInitials

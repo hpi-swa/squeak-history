@@ -1,0 +1,4 @@
+preparation - conversations cache
+resetCacheForMailConversations
+
+	self newDefault resetCacheForMailConversations.

@@ -1,0 +1,23 @@
+{
+	"class" : {
+		"on:" : "mt 1/9/2020 11:54" },
+	"instance" : {
+		"body" : "mt 1/10/2020 17:06",
+		"bodyFormatted" : "mt 1/10/2020 17:19",
+		"contents" : "mt 1/10/2020 17:06",
+		"conversation" : "mt 1/10/2020 16:37",
+		"date" : "mt 1/11/2020 17:43",
+		"dateAndTime" : "mt 1/10/2020 17:08",
+		"from" : "mt 1/10/2020 16:44",
+		"inReplyTo" : "mt 1/10/2020 16:44",
+		"isImportant" : "mt 1/11/2020 15:11",
+		"isUnread" : "mt 1/9/2020 18:50",
+		"mailbox" : "mt 1/10/2020 11:04",
+		"markRead" : "mt 1/9/2020 18:50",
+		"replies" : "mt 1/10/2020 16:43",
+		"sender" : "mt 1/10/2020 16:44",
+		"subject" : "mt 1/10/2020 17:05",
+		"text" : "mt 1/10/2020 17:05",
+		"timestamp" : "mt 1/11/2020 17:44",
+		"wrapper" : "mt 1/9/2020 11:55",
+		"wrapper:" : "mt 1/9/2020 11:55" } }

@@ -1,0 +1,20 @@
+{
+	"class" : {
+		"allNamed:" : "mt 1/9/2020 17:42",
+		"allPersons" : "mt 1/9/2020 17:23",
+		"at:" : "mt 1/9/2020 16:27",
+		"forgetAllPersons" : "mt 1/9/2020 17:19",
+		"from:" : "mt 1/11/2020 13:18",
+		"gatherAllPersons" : "mt 1/11/2020 14:09",
+		"keyAt:" : "mt 1/11/2020 17:20",
+		"named:" : "mt 1/9/2020 16:26" },
+	"instance" : {
+		"anyMail" : "mt 1/11/2020 17:15",
+		"fullName" : "mt 1/11/2020 13:22",
+		"fullNames" : "mt 1/11/2020 13:14",
+		"fullNames:" : "mt 1/11/2020 13:14",
+		"initialize" : "mt 1/11/2020 13:15",
+		"mailAddress" : "mt 1/9/2020 17:17",
+		"mailAddresses" : "mt 1/9/2020 16:36",
+		"mailAddresses:" : "mt 1/9/2020 16:36",
+		"mails" : "mt 1/11/2020 15:52" } }

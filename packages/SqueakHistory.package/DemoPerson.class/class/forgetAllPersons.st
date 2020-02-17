@@ -1,0 +1,3 @@
+cache
+forgetAllPersons
+	KnownPersons := nil.

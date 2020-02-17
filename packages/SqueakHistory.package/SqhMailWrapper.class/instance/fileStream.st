@@ -1,4 +1,4 @@
-as yet unclassified
+accessing - raw
 fileStream
 
 	ArchiveFileStreams ifNil: [ArchiveFileStreams := Dictionary new].
