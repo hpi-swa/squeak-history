@@ -1,15 +1,18 @@
 preparation - conversations cache
 resetCacheForMailConversations
 	
-	CachedConversations := Dictionary new: 5000.
+	| tmp |
+	tmp := Dictionary new: 5000.
 	
 	self messagesCachedDo: [:wrapper |
-		(CachedConversations
+		(tmp
 			at: wrapper inReplyToFirst
 			ifAbsentPut: [Set new])
 				add: wrapper].
-	
-	CachedConversations keys do: [:startId |
-		CachedConversations
-			at: startId
-			put: ((CachedConversations at: startId) sorted: [:a :b | a dateAndTime > b dateAndTime])].
+
+	CachedConversations := OrderedDictionary new: 5000.	
+	(tmp keys sorted: [:a :b | a dateAndTime >= b dateAndTime])
+		do: [:startId |
+			CachedConversations
+				at: startId
+				put: ((tmp at: startId) sorted: [:a :b | a dateAndTime >= b dateAndTime])].

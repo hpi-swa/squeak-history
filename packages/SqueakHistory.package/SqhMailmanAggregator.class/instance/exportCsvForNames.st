@@ -13,7 +13,7 @@ exportCsvForNames
 	
 		stream
 			nextPutAll: authorKey; nextPut: $;;
-			nextPutAll: ((content at: #name) someElement copyReplaceAll: ';' with: ',') ; nextPut: $;;
+			nextPutAll: ((content at: #name) anyOne copyReplaceAll: ';' with: ',') ; nextPut: $;;
 			nextPutAll: (content at: #count) asString; nextPut: $;.
 		(content at: #mail)
 			do: [:ea | stream nextPutAll: ea]

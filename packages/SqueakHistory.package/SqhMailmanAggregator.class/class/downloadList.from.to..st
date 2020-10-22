@@ -12,7 +12,7 @@ downloadList: listName from: urlToPiper to: localPath
 	fileNames
 		do: [:fileName | | response stream |
 			response := WebClient httpGet: urlToPiper, fileName.
-			stream := #[] writeStream.
+			stream := '' writeStream.
 			response
 				streamTo: stream
 				size: response contentLength

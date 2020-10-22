@@ -10,7 +10,8 @@ rulesForAuthorKeyNormalization
 		'aaron' -> 'aaronreichow'.
 		'blake' -> 'blakewatson'.
 		
-		'bertfreudenbergg' -> 'bertfreudenberg'.
+		'bertfreudenbergg' -> 'vanessafreudenberg'.
+		'bertfreudenberg' -> 'vanessafreudenberg'.
 
 		'chrismullerchris' -> 'chrismuller'.
 		'chrismullerviagoogledrive' -> 'chrismuller'.

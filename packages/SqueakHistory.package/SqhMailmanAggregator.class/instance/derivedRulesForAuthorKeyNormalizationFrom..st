@@ -1,6 +1,6 @@
 normalization - support
 derivedRulesForAuthorKeyNormalizationFrom: someKeyTuples
-	"Given a list of tuples, merge those tuples, then define the target key. Can be usefule after generating such tuples from a bunch of mail addresses. See #aggregateMailAddresses."
+	"Given a list of tuples, merge those tuples, then define the target key. Can be useful after generating such tuples from a bunch of mail addresses. See #aggregateMailAddresses(Uncached)."
 	
 	| result prev |
 

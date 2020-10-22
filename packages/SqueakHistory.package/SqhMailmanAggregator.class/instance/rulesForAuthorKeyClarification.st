@@ -11,10 +11,10 @@ rulesForAuthorKeyClarification
 		
 		'a.kuckartz@lilly.ping.de' -> ('akuckartz' -> 'andreaskuckartz').
 		
-		'bert@freudenbergs.de' -> ('bert' -> 'bertfreudenberg').
-		'bert@isg.cs.uni-magdeburg.de' -> ('bert' -> 'bertfreudenberg').
-		'squeakland-forum@squeakland.org' -> ('bert' -> 'bertfreudenberg').
-		'etoys-dev-forum@squeakland.org' -> ('bert' -> 'bertfreudenberg').
+		'bert@freudenbergs.de' -> ('bert' -> 'vanessafreudenberg').
+		'bert@isg.cs.uni-magdeburg.de' -> ('bert' -> 'vanessafreudenberg').
+		'squeakland-forum@squeakland.org' -> ('bert' -> 'vanessafreudenberg').
+		'etoys-dev-forum@squeakland.org' -> ('bert' -> 'vanessafreudenberg').
 		
 		'tim@io.com' -> ('tim' -> 'timolson').
 		'tim@nada1.de' -> ('tim' -> 'timfelgentreff').
