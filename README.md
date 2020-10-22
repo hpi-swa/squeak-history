@@ -47,11 +47,10 @@ There are rules to normalize different kinds of information: author names, times
 ```Smalltalk
 "rulesForAuthorKeyNormalization"
 'alankay' -> 'alancurtiskay'.
-'bertfreudenberg' -> 'vanessafreudenberg'.
-'bertfreudenbergg' -> 'vanessafreudenberg'.
+'hhirzel' -> 'hanneshirzel'.
 
 "rulesForAuthorKeyClarification"
-'etoys-dev-forum@squeakland.org' -> ('bert' -> 'vanessafreudenberg').
+'squeakdev@reider.net' -> ('squeakdev' -> 'alanreider').
 'squeak@bike-nomad.com' -> ('squeak' -> 'nedkonz').
 ```
 
