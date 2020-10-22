@@ -30,6 +30,16 @@ countMessageLines
   ^ count
 ```
 
+Note that you should also derive some rules for author-key normalization to further improve the overall quality of query results. Just run this:
+
+```Smalltalk
+SqhMailmanAggregator new
+  showProgress: true; "optional"
+  deriveRulesForAuthorKeyNormalization. "ignore the warning"
+```
+
+For more information on normalization, see below.
+
 ## Notes on Normalization
 
 There are rules to normalize different kinds of information: author names, timestamps, mail addresses. The goal is to identify contributors and, eventually, relevant discussions. Hand-selected rules can be found in `SqhMailmanAggregator >> #rulesForAuthorKeyNormalization` and `#rulesForAuthorKeyClarification`. Here is an excerpt:
@@ -37,10 +47,11 @@ There are rules to normalize different kinds of information: author names, times
 ```Smalltalk
 "rulesForAuthorKeyNormalization"
 'alankay' -> 'alancurtiskay'.
-'bertfreudenbergg' -> 'bertfreudenberg'.
+'bertfreudenberg' -> 'vanessafreudenberg'.
+'bertfreudenbergg' -> 'vanessafreudenberg'.
 
 "rulesForAuthorKeyClarification"
-'etoys-dev-forum@squeakland.org' -> ('bert' -> 'bertfreudenberg').
+'etoys-dev-forum@squeakland.org' -> ('bert' -> 'vanessafreudenberg').
 'squeak@bike-nomad.com' -> ('squeak' -> 'nedkonz').
 ```
 
