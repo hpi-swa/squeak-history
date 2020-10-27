@@ -2,22 +2,32 @@ normalization - support
 rulesForAuthorFullNameClarification
 	"Maps the author key to the author's actual name."
 	
-	^  {
+	^  rulesForAuthorFullNameClarification ifNil: [rulesForAuthorFullNameClarification := Dictionary newFrom: {
  			'mailmancommits'->'<commits>' . 
 			'mailmanother'->'<commits>' . 
 			'zarroboogsperchild'->'<commits>' . 
 			
-			'dreyfusspierreandreedu'->'Pierre-André Dreyfuss' . 
-			'bruceoneel'->'Bruce O''Neel' . 
-			'nick'->'Nick' . 
 			'antonio'->'Antonio Moreno' . 
-			'orionxelenzil'->'Orion Elenzil' . 
-			'gettimothy'->'Timothy M.' . 
-			'offrayvladimirlunacardenas'->'Offray V. L. Cardenas' . 
-			'johnmmcintosh'->'John M. McIntosh' . 
-			'davidtlewis'->'Dave Lewis' . 
-			'philb'->'Phil B.' . 
-			'lucianonotarfrancesco'->'Luciano E. Notarfrancesco' . 
+
+			'bruceoneel'->'Bruce O''Neel' . 
 			'blakewatson'->'Blake Watson' . 
-			'juanmanuelvuletich'->'Juan M. Vuletich'
-		}
+
+			'dreyfusspierreandreedu'->'Pierre-André Dreyfuss' . 
+			'davidtlewis'->'Dave Lewis' . 
+
+			'frederikvandendriessche' -> 'Frederik Vandendriessche'. 
+
+			'gettimothy'->'Timothy M.' . 
+
+			'johnmmcintosh'->'John M. McIntosh' . 
+			'juanmanuelvuletich'->'Juan M. Vuletich'.
+			'lucianonotarfrancesco'->'Luciano E. Notarfrancesco' . 
+
+			'nick'->'Nick' . 
+			
+			'orionxelenzil'->'Orion Elenzil' . 
+			'offrayvladimirlunacardenas'->'Offray V. L. Cardenas' . 
+
+			'philb'->'Phil B.' . 
+
+		}]

@@ -64,6 +64,10 @@ rulesForAuthorKeyNormalization
 		'johnreedxmaffeo' -> 'johnreedmaffeo'.
 		'jrmaffeo' -> 'johnreedmaffeo'.
 		
+		'joselredrejo' ->  'joseluisredrejorodriguez'.
+		'joselredrejorodriguez' ->  'joseluisredrejorodriguez'.
+		'joseluisredrejo' ->  'joseluisredrejorodriguez'.
+		
 		'vuletich' -> 'juanmanuelvuletich'.
 
 		'deepcovelabsyvrjoergbeekmann' -> 'joergbeekmann'.
@@ -92,6 +96,9 @@ rulesForAuthorKeyNormalization
 		'philippebackhighoctane' -> 'philippeback'.
 		'philathighoctanebe' -> 'philippeback'.
 
+		'dreyfusspierreandreedu' -> 'pierreandredreyfuss'.
+		'padreyfussatexcitecom' -> 'pierreandredreyfuss'.
+		
 		'ralphjohnson' -> 'ralphejohnson'.
 		'randalschwartz' -> 'randallschwartz'.
 		'ritaatisgcsunimagdeburgde' -> 'ritafreudenberg'.

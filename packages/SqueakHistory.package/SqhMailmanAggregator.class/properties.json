@@ -14,7 +14,8 @@
 		"logOnTranscript",
 		"authorInitials",
 		"rulesForAuthorKeyNormalization",
-		"rulesForAuthorKeyClarification" ],
+		"rulesForAuthorKeyClarification",
+		"rulesForAuthorFullNameClarification" ],
 	"name" : "SqhMailmanAggregator",
 	"pools" : [
 		 ],

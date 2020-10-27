@@ -1,6 +1,7 @@
 accessing - convenience
 bodyFormatted
-
+	"Adds a gray color to quoted text lines, which are indicated by a leading $>."
+	
 	| result |
 	result := self text asText.
 	2 to: result size do: [:index |

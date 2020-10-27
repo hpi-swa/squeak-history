@@ -2,6 +2,10 @@ preparation - message cache
 resetCacheForMailMessages
 	"Create instances of MailmanMailMessage to function as wrappers around MailMessage for quick access."
 	
+	(self environment classNamed: #DemoPerson)
+		ifNotNil: [:c | c forgetAllPersons].
+	CachedConversations := nil.
+	
 	CachedMessages := OrderedCollection new: 200000.
 	
 	self messagesNormalizedDo: [:mailMessage :listName |
@@ -13,6 +17,7 @@ resetCacheForMailMessages
 				setProperty: #authorInitials toValue: (mailMessage fields at: 'squeak-author-initials');
 				setProperty: #authorKey toValue: (mailMessage fields at: 'squeak-author-key');
 				setProperty: #authorFullName toValue: (mailMessage fields at: 'squeak-author-fullname');
+				setMailMessage: mailMessage during: [:wrapper | wrapper messageId]; "Needed for conversations."
 				yourself)].
 			
 	"Sort messages from new to old."

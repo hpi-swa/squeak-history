@@ -1,7 +1,5 @@
 accessing - raw
 mailMessage
-
-	self flag: #todo. "mt: Use inst var mailMessage as cache."
 	
-	^ (SqhMBoxReadWriter on: self fileStream)
-		getMessageFrom: self fileStart to: self fileEnd
+	^ mailMessage ifNil: [(SqhMBoxReadWriter on: self fileStream)
+		getMessageFrom: self fileStart to: self fileEnd]

@@ -5,4 +5,4 @@ initialize
 	
 	self
 		fullNames: Set new;
-		mailAddresses: Dictionary new.
+		mailAddresses: OrderedDictionary new.
