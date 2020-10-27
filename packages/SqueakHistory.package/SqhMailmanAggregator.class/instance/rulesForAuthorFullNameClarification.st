@@ -41,7 +41,9 @@ rulesForAuthorFullNameClarification
 			'jecelassumpcaojr' -> 'Jecel Assumpcao Jr.'.
 			'jj' -> 'Jason'. "???"
 			
+			'karlramberg' -> 'Karl Ramberg'.
 			'keithhodges' -> 'Keith Hodges'.
+			'kendickey' -> 'Ken Dickey'.
 
 			'leventeuzonyi' -> 'Levente Uzonyi'.
 			'lucianonotarfrancesco'->'Luciano E. Notarfrancesco' . 

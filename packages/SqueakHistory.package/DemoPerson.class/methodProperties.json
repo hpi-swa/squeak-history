@@ -9,9 +9,11 @@
 		"gatherAllPersons" : "mt 10/27/2020 12:30:56.29446",
 		"keyAt:" : "mt 1/11/2020 17:20",
 		"named:" : "mt 1/9/2020 16:26",
-		"top:" : "mt 10/27/2020 15:20:36.94746" },
+		"top:" : "mt 10/27/2020 16:27:07.84246",
+		"top:fromTimespan:" : "mt 10/27/2020 16:26:53.01046" },
 	"instance" : {
 		"anyMail" : "mt 1/11/2020 17:15",
+		"asColor" : "mt 10/27/2020 16:56:38.07246",
 		"authorKey" : "mt 10/27/2020 11:20:26.20246",
 		"fullName" : "mt 1/11/2020 13:22",
 		"fullNames" : "mt 1/11/2020 13:14",
@@ -21,6 +23,6 @@
 		"mailAddresses" : "mt 1/9/2020 16:36",
 		"mailAddresses:" : "mt 1/9/2020 16:36",
 		"mails" : "mt 1/11/2020 15:52",
-		"mailsFromTimespan:" : "mt 10/27/2020 15:43:25.06746",
+		"mailsFromTimespan:" : "mt 10/27/2020 16:46:37.18846",
 		"printOn:" : "mt 10/27/2020 11:25:23.75846",
 		"setPreferredName:" : "mt 10/27/2020 12:27:50.66946" } }
