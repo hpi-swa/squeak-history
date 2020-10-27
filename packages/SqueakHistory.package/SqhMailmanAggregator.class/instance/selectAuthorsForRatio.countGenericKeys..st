@@ -19,8 +19,8 @@ selectAuthorsForRatio: percentage countGenericKeys: boolean
 	authors := authors sorted: [:a :b |
 		(a value at: #count) >= (b value at: #count)].
 	authors do: [:each |
-		count >= level ifTrue: [^ Dictionary newFrom: result].
+		count >= level ifTrue: [^ OrderedDictionary newFrom: result].
 		count := count + (each value at: #count).
 		result add: each].
 	
-	^ Dictionary newFrom: result
+	^ OrderedDictionary newFrom: result
