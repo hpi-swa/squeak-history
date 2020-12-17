@@ -62,6 +62,8 @@ rulesForAuthorFullNameClarification
 			'stephaneducasse' -> 'Stéphane Ducasse'.
 			'stephanerollandin' -> 'Stéphane Rollandin'.
 			'stephenpair' -> 'Stephen Pair'.
+			'stephentravispope' -> 'Stephen T. Pope'.
+			'stephensmith' -> 'Stephen A. Smith'.
 			
 			'timrowledge' -> 'Tim Rowledge'.
 			'tobiaspape' -> 'Tobias Pape'.
