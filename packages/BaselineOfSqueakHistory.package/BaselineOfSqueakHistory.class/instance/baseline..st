@@ -1,4 +1,4 @@
-as yet unclassified
+baseline
 baseline: spec
 	"Squeak 5.2 and above."
 	<baseline>

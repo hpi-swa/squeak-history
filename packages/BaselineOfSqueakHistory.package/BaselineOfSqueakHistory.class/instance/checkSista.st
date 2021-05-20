@@ -1,4 +1,4 @@
-as yet unclassified
+scripts
 checkSista
 
 	(Smalltalk classNamed: #EncoderForSistaV1)
