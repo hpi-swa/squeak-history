@@ -13,12 +13,13 @@ from: properties
 			
 			"2) Retain all mail addresses with date-and-time of last use."
 			person mailAddresses
-				at: (properties at: #mailAddress)
-				ifAbsentPut: [properties at: #dateAndTime]
-				ifPresentPut: [:stamp |
-					(properties at: #dateAndTime) in: [:newStamp |
-						newStamp > stamp
-							ifTrue: [newStamp]
-							ifFalse: [stamp]]].
+				at: (properties at: #mailAddress) put: (person mailAddresses
+					at: (properties at: #mailAddress)
+					ifPresent: [:stamp |
+						(properties at: #dateAndTime) in: [:newStamp |
+							newStamp > stamp
+								ifTrue: [newStamp]
+								ifFalse: [stamp]]]
+					ifAbsent: [properties at: #dateAndTime]).
 			
 			^ person].
