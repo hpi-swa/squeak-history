@@ -4,11 +4,13 @@ resetCacheForMailConversations
 	| tmp |
 	tmp := Dictionary new: 5000.
 	
-	self messagesCachedDo: [:wrapper |
-		(tmp
-			at: wrapper inReplyToFirst
-			ifAbsentPut: [Set new])
-				add: wrapper].
+	self copy
+		mailingLists: self class allListNames; "because CachedConversations is global for all mailing lists"
+		messagesCachedDo: [:wrapper |
+			(tmp
+				at: wrapper inReplyToFirst
+				ifAbsentPut: [Set new])
+					add: wrapper].
 	
 	"Try to merge broken chains due to missing mails (or wrong message ids)."
 	(tmp keys select: [:w | w mailMessageInReplyTo notNil and: [self dateFilter ifNil: [true] ifNotNil: [:filter | filter value: w dateAndTime]]])
