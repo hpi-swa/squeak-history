@@ -1,4 +1,4 @@
-as yet unclassified
+instance creation
 from: mailMessage
 
 	^ self new

@@ -1,10 +1,12 @@
 {
 	"class" : {
 		"on:" : "mt 2/5/2019 15:26",
-		"onFileNamed:" : "mt 2/5/2019 17:52" },
+		"onFileNamed:" : "mt 2/5/2019 17:52",
+		"onFileNamed:do:" : "ct 5/20/2021 21:35" },
 	"instance" : {
 		"allMessages" : "mt 2/7/2019 17:19",
 		"atEnd" : "mt 2/7/2019 17:19",
+		"close" : "ct 5/20/2021 21:34",
 		"fileName" : "mt 3/22/2019 15:16",
 		"getChunkFrom:to:" : "mt 3/22/2019 14:59",
 		"getMessageFrom:to:" : "mt 3/22/2019 15:48",
