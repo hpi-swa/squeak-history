@@ -1,4 +1,4 @@
-as yet unclassified
+accessing instances and variables
 top: n
 
 	^ (SqhMailmanAggregator newDefault authorKeysSorted
