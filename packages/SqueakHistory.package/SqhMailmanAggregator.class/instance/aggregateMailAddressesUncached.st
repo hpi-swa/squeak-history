@@ -1,10 +1,10 @@
 queries
 aggregateMailAddressesUncached
 	"Can be used to identify more duplicate author-keys."
-	
+
 	| result |
 	result := Dictionary new.
-	self messagesNormalizedDo: [:mailMessage |
+	self allMessagesNormalizedDo: [:mailMessage |
 		(mailMessage fields at: 'squeak-mail-address') in: [:mailAddress |
 			(self genericMailAddresses includes: mailAddress) ifFalse: [
 				(result
