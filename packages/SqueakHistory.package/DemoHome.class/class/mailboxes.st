@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 mailboxes
 
 	^ SqhMailmanAggregator allListNames
