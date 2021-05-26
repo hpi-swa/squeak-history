@@ -1,4 +1,5 @@
 OrderedDictionary {
 	'packages/BaselineOfSqueakHistory.package' : #SquotCypressCodeSerializer,
-	'packages/SqueakHistory.package' : #SquotCypressCodeSerializer
+	'packages/SqueakHistory.package' : #SquotCypressCodeSerializer,
+	'packages/SqueakHistoryData.package' : #SquotCypressCodeSerializer
 }
