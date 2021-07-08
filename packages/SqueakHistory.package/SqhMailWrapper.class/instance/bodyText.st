@@ -1,6 +1,5 @@
-as yet unclassified
+accessing - domain
 bodyText
 
-	^ self
-		valueOfProperty: #bodyText
-		ifAbsentPut: [self mailMessage bodyText utf8ToSqueak]
+	^ self valueOfProperty: #bodyText ifAbsentPut: [
+		self decode: self mailMessage bodyText]
