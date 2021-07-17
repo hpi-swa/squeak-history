@@ -1,5 +1,6 @@
 {
 	"class" : {
+		"acceptsZipFileFor:" : "ct 7/17/2021 17:53",
 		"allListNames" : "mt 3/27/2019 09:38",
 		"allListUrls" : "mt 3/27/2019 09:37",
 		"allLists" : "mt 3/27/2019 10:10",
@@ -11,7 +12,7 @@
 		"conversationsOn:do:" : "mt 1/10/2020 16:28",
 		"convertHtmlToMBox:" : "mt 3/26/2019 18:27",
 		"downloadAllLists" : "mt 3/27/2019 10:05",
-		"downloadList:from:forMonthsThat:to:" : "ct 5/25/2021 22:11",
+		"downloadList:from:forMonthsThat:to:" : "ct 7/17/2021 17:48",
 		"downloadList:from:to:" : "ct 5/25/2021 22:07",
 		"downloadListFrom:" : "mt 3/27/2019 09:42",
 		"downloadListFrom:forMonthsThat:to:" : "ct 5/25/2021 22:06",
