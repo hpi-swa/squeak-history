@@ -2,8 +2,7 @@ preparation - message cache
 resetCacheForMailMessages
 	"Create instances of MailmanMailMessage to function as wrappers around MailMessage for quick access."
 	
-	(self environment classNamed: #DemoPerson)
-		ifNotNil: [:c | c forgetAllPersons].
+	self triggerEvent: #reset.
 	CachedConversations := nil.
 	
 	CachedMessages := OrderedCollection new: 200000.
