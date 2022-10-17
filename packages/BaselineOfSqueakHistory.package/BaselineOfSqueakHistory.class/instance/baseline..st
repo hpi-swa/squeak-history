@@ -5,7 +5,5 @@ baseline: spec
 	
 	spec for: #common do: [
 		spec package: 'SqueakHistory' with: [
-			spec
-				preLoadDoIt: #checkSista;
-				postLoadDoIt: #loadData].
+			spec postLoadDoIt: #loadData].
 		spec group: 'default' with: #('SqueakHistory')].
