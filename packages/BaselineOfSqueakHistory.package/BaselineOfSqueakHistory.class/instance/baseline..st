@@ -4,9 +4,7 @@ baseline: spec
 	<baseline>
 	
 	spec for: #common do: [
-		spec package: 'SqueakHistory' with: [
-			spec
-				preLoadDoIt: #checkSista].
+		spec package: 'SqueakHistory'.
 		spec package: 'SqueakHistoryData' with: [
 			spec
 				requires: 'SqueakHistory';
