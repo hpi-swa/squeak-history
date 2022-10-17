@@ -1,4 +1,4 @@
-as yet unclassified
+accessing - domain
 isInReplyToValid
 	"See SqhMailmanAggregator >> #resetCacheForMailConversations."
 	
