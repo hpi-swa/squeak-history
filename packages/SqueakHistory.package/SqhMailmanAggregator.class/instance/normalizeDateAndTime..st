@@ -33,7 +33,7 @@ normalizeDateAndTime: mailMessage
 							month: (Date indexOfMonth: dat second)
 							day: dat first asInteger)
 						time: (Time fromString: dat fourth).
-					dat offset: offset]
+					dat sqhAsLocalAt: offset]
 				ifFalse: ["Date: Sat Jan 28 04:00:35 2012"
 					DateAndTime
 						date: (Date
@@ -55,7 +55,8 @@ normalizeDateAndTime: mailMessage
 					month: (Date indexOfMonth: dat third)
 					day: dat second asInteger)
 				time: (Time fromString: dat fifth).
-			dat offset: offset].
+			dat sqhAsLocalAt: offset].
+	self flag: #discuss. "ct: Should we also apply offset to sep (sep offset: offset with Squeak6.1 semantics) or is there no guarantee that it is specified in UTC?"
 	
 	"Write results into mail message."
 	(mailMessage fields at: 'date') first mainValue: dat printString.
