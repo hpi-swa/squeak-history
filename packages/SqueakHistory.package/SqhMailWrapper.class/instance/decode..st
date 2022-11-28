@@ -1,7 +1,5 @@
 private
 decode: aString
-	"Apply zero up to two decodings until an error occurs. Worked well for Squeak Inbox Talk."
 
-	| decoded |
-	decoded := aString.
-	^ [(decoded := decoded utf8ToSqueak) utf8ToSqueak] ifError: [decoded]
+	self flag: #decoding. "Decoding was moved hither from mbox reader. See comment in SqhMBoxReadWriter>>#getMessageFrom:to:."
+	^ [aString utf8ToSqueak] ifError: [aString "fallback for miss-encoded characters"]

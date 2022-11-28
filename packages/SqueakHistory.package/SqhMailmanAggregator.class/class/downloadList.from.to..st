@@ -7,19 +7,13 @@ downloadList: listName from: urlToPiper to: localPath
 	directory assureExistence.
 	
 	fileNames := ((WebClient httpGet: urlToPiper) content findTokens: '"')
-		select: [:ea | (ea endsWith: '.gz') or: [ea endsWith: '.txt']].
-
+		select: [:ea | (ea endsWith: '.gz') or: [ea endsWith: '.txt']]
+		thenCollect: [:fileName | fileName -> (self monthFromFileName: fileName)].
+	fileNames := fileNames collect: [:fileNameAndMonth |
+		(fileNameAndMonth key endsWith: '.txt.gz') ==> [self acceptsZipFileFor: fileNameAndMonth value]
+			ifTrue: [fileNameAndMonth key]
+			ifFalse: [fileNameAndMonth key sqhWithoutTrailing: '.gz']].
+	
 	fileNames
-		do: [:fileName | | response stream |
-			response := WebClient httpGet: urlToPiper, fileName.
-			stream := '' writeStream.
-			response
-				streamTo: stream
-				size: response contentLength
-				progress: nil.
-			(fileName endsWith: '.gz')
-				ifTrue: [directory forceNewFileNamed: (fileName allButLast: 3) do: [:outputStream |
-					outputStream nextPutAll: stream contents unzipped]]
-				ifFalse: [directory forceNewFileNamed: fileName do: [:outputStream |
-					outputStream nextPutAll: stream contents]]]
-		displayingProgress: [:fileName | 'Downloading ', directory localName, ' ... ', fileName].
+		do: [:fileName | self downloadMessagesIn: fileName from: urlToPiper into: directory]
+		displayingProgress: [:fileName | 'Downloading {1} ... {2}' format: {directory localName. fileName}]
