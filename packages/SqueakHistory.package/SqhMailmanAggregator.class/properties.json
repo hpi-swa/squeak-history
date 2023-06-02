@@ -15,7 +15,8 @@
 		"authorInitials",
 		"rulesForAuthorKeyNormalization",
 		"rulesForAuthorKeyClarification",
-		"rulesForAuthorFullNameClarification" ],
+		"rulesForAuthorFullNameClarification",
+		"dateFilter" ],
 	"name" : "SqhMailmanAggregator",
 	"pools" : [
 		 ],
