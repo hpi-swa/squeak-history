@@ -9,7 +9,7 @@ fileStream
 			"Replace old stream with fresh one."
 			ArchiveFileStreams
 				at: self fileName
-				put: (StandardFileStream readOnlyFileNamed: fileName)]] 
+				put: self newFileStream]] 
 		ifAbsentPut: [
 			"Install a new stream."
-			StandardFileStream readOnlyFileNamed: fileName].
+			self newFileStream].

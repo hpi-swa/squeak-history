@@ -1,15 +1,15 @@
 {
 	"class" : {
 		"on:" : "mt 2/5/2019 15:26",
-		"onFileNamed:" : "mt 2/5/2019 17:52",
-		"onFileNamed:do:" : "ct 5/20/2021 21:35" },
+		"onFileNamed:" : "ct 11/26/2022 22:38",
+		"onFileNamed:do:" : "ct 11/26/2022 22:38" },
 	"instance" : {
 		"allMessages" : "mt 2/7/2019 17:19",
 		"atEnd" : "mt 2/7/2019 17:19",
 		"close" : "ct 5/20/2021 21:34",
 		"fileName" : "mt 3/22/2019 15:16",
 		"getChunkFrom:to:" : "mt 3/22/2019 14:59",
-		"getMessageFrom:to:" : "mt 3/22/2019 15:48",
+		"getMessageFrom:to:" : "ct 11/28/2022 14:21",
 		"isNextLineSeparator" : "mt 2/5/2019 16:25",
 		"nextChunk" : "mt 3/22/2019 15:07",
 		"nextLine" : "mt 2/5/2019 16:00",
