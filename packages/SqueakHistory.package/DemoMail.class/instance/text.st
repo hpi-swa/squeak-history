@@ -1,4 +1,4 @@
 accessing - convenience
 text
 
-	^ self wrapper bodyText
+	^ self wrapper richText

@@ -1,9 +1,9 @@
 enumerating - cached
-messageLinesDo: workBlock
+messageLinesDo: workBlock 
 	"Enumerate all non-empty lines in all mail messages."
 	
 	self messagesCachedDo: [:wrapper |
-		wrapper mailMessage bodyText linesDo: [:line |
+		wrapper mailMessage rawText linesDo: [:line |
 			line withBlanksTrimmed ifNotEmpty: [:nonEmptyLine |			
 				workBlock
 					cull: nonEmptyLine "may be quote ('>') or regular"

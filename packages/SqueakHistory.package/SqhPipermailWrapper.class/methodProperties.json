@@ -1,6 +1,15 @@
 {
 	"class" : {
-		 },
+		"autoDownloadRichTexts" : "ct 6/2/2023 20:45",
+		"autoDownloadRichTexts:" : "ct 5/16/2023 16:46" },
 	"instance" : {
+		"attachmentAt:" : "ct 6/2/2023 18:48",
+		"basicAttachmentNames" : "ct 5/16/2023 16:02",
+		"basicParts" : "ct 6/2/2023 18:36",
+		"basicPlainText" : "ct 5/16/2023 15:20",
+		"basicRichText" : "ct 6/2/2023 18:49",
 		"basicSubject" : "ct 5/16/2023 14:47",
-		"decode:" : "ct 6/2/2023 18:35" } }
+		"decode:" : "ct 6/2/2023 18:35",
+		"nameFromPart:" : "ct 5/16/2023 15:33",
+		"shouldAutoDownloadRichText" : "ct 5/16/2023 16:47",
+		"urlFromPart:" : "ct 6/2/2023 18:34" } }
