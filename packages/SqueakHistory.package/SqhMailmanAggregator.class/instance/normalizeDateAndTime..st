@@ -1,8 +1,11 @@
 normalization
 normalizeDateAndTime: mailMessage
 	"Repair date information."
-	
+
 	| sep dat offset |
+	mailMessage fields
+		at: 'squeak-date' ifPresent: [:date | ^ self].
+	
 	sep := (mailMessage fieldNamed: 'separator' ifAbsent: ['']) mainValue.
 	sep ifEmpty: [^ self].
 	sep := (sep findTokens: Character space) last: 4.
@@ -14,13 +17,13 @@ normalizeDateAndTime: mailMessage
 			month: (Date indexOfMonth: sep first)
 			day: sep second asInteger)
 		time: (Time fromString: sep third).
-			
+	
 	dat := (mailMessage fieldNamed: 'date' ifAbsent: ['']) mainValue.
 	dat ifEmpty: [^ self].
 	dat := dat findTokens: Character space.
 	
-	(dat fourth includesSubstring: ':') "Time: 22:42:23"
-		ifTrue: [
+	dat := (dat fourth includesSubstring: ':')
+		ifTrue: ["Time: 22:42:23"
 			(Number readFrom: dat first ifFail: [0]) > 0
 				ifTrue: ["Date: 11 Aug 2010 22:42:23 +0000"
 					offset := Duration days: 0 hours: dat fifth asInteger // 100 minutes: 0 seconds: 0.
@@ -29,10 +32,10 @@ normalizeDateAndTime: mailMessage
 							year: dat third asInteger
 							month: (Date indexOfMonth: dat second)
 							day: dat first asInteger)
-						time: ((Time fromString: dat fourth) addSeconds: offset asSeconds negated).
-					dat utcOffset: offset]
+						time: (Time fromString: dat fourth).
+					dat sqhAsLocalAt: offset]
 				ifFalse: ["Date: Sat Jan 28 04:00:35 2012"
-					dat := DateAndTime
+					DateAndTime
 						date: (Date
 							year: dat fifth asInteger
 							month: (Date indexOfMonth: dat second)
@@ -44,15 +47,16 @@ normalizeDateAndTime: mailMessage
 			self flag: #performance.
 			(self class mapForTimeOffset includesKey: dat sixth asLowercase)
 				ifTrue: [dat at: 6 put: (self class mapForTimeOffset at: dat sixth asLowercase)].
-
+			
 			offset := Duration days: 0 hours: dat sixth asInteger // 100 minutes: 0 seconds: 0.
 			dat := DateAndTime
 				date: (Date
 					year: dat fourth asInteger
 					month: (Date indexOfMonth: dat third)
 					day: dat second asInteger)
-				time: ((Time fromString: dat fifth) addSeconds: offset asSeconds negated).
-			dat utcOffset: offset].
+				time: (Time fromString: dat fifth).
+			dat sqhAsLocalAt: offset].
+	self flag: #discuss. "ct: Should we also apply offset to sep (sep offset: offset with Squeak6.1 semantics) or is there no guarantee that it is specified in UTC?"
 	
 	"Write results into mail message."
 	(mailMessage fields at: 'date') first mainValue: dat printString.
