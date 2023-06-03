@@ -1,8 +1,11 @@
 preparation
-downloadMessagesIn: fileName from: urlToPiperFile into: directory
+downloadMessagesIn: fileName from: mboxUrl into: directory
 
 	| response content |
-	response := WebClient httpGet: urlToPiperFile, fileName.
+	self flag: #performance. "Experiment with parallel downloads."
+	
+	response := WebClient httpGet: mboxUrl.
+	response isSuccess ifFalse: [self error: response status].
 	content := response content.
 	
 	(fileName endsWith: '.gz') ifTrue: [

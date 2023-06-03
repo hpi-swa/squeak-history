@@ -1,4 +1,4 @@
-preparation
+preparation - private
 convertHtmlToMBox: htmlContent
 
 	| start end subject author mail date dateSep body messageId |

@@ -1,13 +1,25 @@
 defaults
 allLists
-	"Note that Tweak has to be fetched manually through web.archive.org. See #downloadTweak."
 
-	^ {
-		'http://lists.squeakfoundation.org/pipermail/squeak-dev/' -> 'squeak-dev'.
-		'http://lists.squeakfoundation.org/pipermail/beginners/' -> 'beginners'.
-		'http://lists.squeakfoundation.org/pipermail/vm-dev/' -> 'vm-dev'.
-		'http://lists.squeakfoundation.org/pipermail/vm-beginners/' -> 'vm-beginners'.
-		'http://lists.squeakfoundation.org/pipermail/etoys-dev/' -> 'etoys-dev'.
-		'http://lists.squeakfoundation.org/pipermail/squeakland/' -> 'squeakland'.
-		'http://cuis-smalltalk.org/pipermail/cuis-dev_cuis-smalltalk.org/' -> 'cuis-dev'
-	}, {self urlOfTweak -> 'tweak'}
+	| squeakMigrated |
+	squeakMigrated := #pipermail -> 'https://lists.squeakfoundation.org/pipermail/'. "no longer updated"
+	squeakMigrated := #hyperkitty -> #('https://lists.squeakfoundation.org/archives/' 'lists.squeakfoundation.org').
+	^ Dictionary new
+		at: 'squeak-dev' put: squeakMigrated;
+		at: 'beginners' put: squeakMigrated;
+		at: 'vm-dev' put: squeakMigrated;
+		at: 'vm-beginners' put: squeakMigrated;
+		at: 'etoys-dev' put:
+			"not migrated (yet?)"
+			#pipermail -> 'https://lists.squeakfoundation.org/pipermail/';
+		at: 'squeakland' put: squeakMigrated;
+		
+		"other lists"
+		at: 'cuis-dev' put:
+			#pipermail -> #('http://cuis-smalltalk.org/pipermail/' 'cuis-dev_cuis-smalltalk.org');
+		at: 'cuis-dev-new' put:
+			#pipermail -> #('https://lists.cuis.st/mailman/archives/' 'cuis-dev');
+		at: 'tweak' put:
+			#pipermailWebArchive -> 'http://web.archive.org/web/20070220151637/http://impara.de/pipermail/';
+		
+		yourself

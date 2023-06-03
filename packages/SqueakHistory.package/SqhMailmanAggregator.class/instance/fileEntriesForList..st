@@ -7,7 +7,7 @@ fileEntriesForList: listName
 	entries := directory fileEntries.
 	
 	self dateFilter ifNotNil: [:filter |
-		entries := entries select: [:entry | filter value: (
-			self class monthFromFileName: entry name) asDateAndTime]].
+		entries := entries select: [:entry | filter value:
+			(self class timespanFromFileName: entry name)]].
 	
 	^ entries
