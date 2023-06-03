@@ -1,0 +1,1 @@
+I wrap a mail message specifically from a HyperKitty archive, e.g., https://lists.squeakfoundation.org/archives/. HyperKitty's mbox files adhere pretty much to the standards, but they currently have a number of quirks which are worked around here.

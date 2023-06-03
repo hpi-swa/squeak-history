@@ -12,7 +12,7 @@ resetCacheForMailMessages
 	
 	self
 		messagesNormalizedDo: [:mailMessage :listName | | newWrapper |
-			newWrapper := SqhMailWrapper from: mailMessage.
+			newWrapper := (mailMessage fields at: 'squeak-mail-type') from: mailMessage.
 			wrappers at: newWrapper messageId ifAbsentPut: [
 				newWrapper
 					setProperty: #listName toValue: listName;

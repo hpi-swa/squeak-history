@@ -1,0 +1,14 @@
+{
+	"category" : "SqueakHistory-MailingLists",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "ct 6/2/2023 18:41",
+	"instvars" : [
+		 ],
+	"name" : "SqhHyperkittyMailWrapper",
+	"pools" : [
+		 ],
+	"super" : "SqhMailWrapper",
+	"type" : "normal" }

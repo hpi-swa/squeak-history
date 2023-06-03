@@ -1,0 +1,14 @@
+{
+	"category" : "SqueakHistory-MailingLists",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"AutoDownloadRichTexts" ],
+	"commentStamp" : "ct 6/2/2023 18:37",
+	"instvars" : [
+		 ],
+	"name" : "SqhPipermailWrapper",
+	"pools" : [
+		 ],
+	"super" : "SqhMailWrapper",
+	"type" : "normal" }
