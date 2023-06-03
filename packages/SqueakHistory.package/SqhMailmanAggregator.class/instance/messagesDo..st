@@ -1,14 +1,21 @@
 enumerating - raw
 messagesDo: workBlock
 
-	| directory |
-	self with: self mailingLists do: [:listName |
-		directory := FileDirectory on: self class archivePath, FileDirectory slash, listName.
-		directory assureExistence. "Necessary?"
-		directory fileEntries do: [:fileEntry |
-			SqhMBoxReadWriter onFileNamed: fileEntry fullName do: [:reader |
-				[reader atEnd] whileFalse: [
-					reader nextMessage in: [:mailMessage |
-						self logOnTranscript ifTrue: [Transcript showln: mailMessage subject].
-						mailMessage fields at: 'squeak-file-name' put: reader fileName.
-						workBlock cull: mailMessage cull: listName]]]]].
+	^ self
+		with: self mailingLists
+		do: [:listName |
+			self
+				with: (self fileEntriesForList: listName)
+				do: [:fileEntry |
+					SqhMBoxReadWriter onFileNamed: fileEntry fullName do: [:reader |
+						[reader atEnd] whileFalse: [
+							reader nextMessage in: [:mailMessage |
+								(self dateFilter
+									ifNil: [true]
+									ifNotNil: [:filter | filter value: mailMessage sqhDate])
+										ifTrue:
+											[self logOnTranscript ifTrue: [Transcript showln: mailMessage subject].
+											mailMessage fields at: 'squeak-file-name' put: reader fileName.
+											workBlock cull: mailMessage cull: listName]]]]]
+				displayingProgress: 'Processing messages...']
+		displayingProgress: [:listName | 'Processing {1}...' format: {listName}]

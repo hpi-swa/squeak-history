@@ -6,7 +6,7 @@ normalizeDateAndTime: mailMessage
 	mailMessage fields
 		at: 'squeak-date' ifPresent: [:date | ^ self].
 	
-	sep := (mailMessage fieldNamed: 'separator' ifAbsent: ['']) mainValue.
+	sep := (mailMessage fieldNamed: 'separator' ifAbsent: [^ self]) mainValue.
 	sep ifEmpty: [^ self].
 	sep := (sep findTokens: Character space) last: 4.
 	
@@ -18,7 +18,7 @@ normalizeDateAndTime: mailMessage
 			day: sep second asInteger)
 		time: (Time fromString: sep third).
 	
-	dat := (mailMessage fieldNamed: 'date' ifAbsent: ['']) mainValue.
+	dat := (mailMessage fieldNamed: 'date' ifAbsent: [^ self]) mainValue.
 	dat ifEmpty: [^ self].
 	dat := dat findTokens: Character space.
 	

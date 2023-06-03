@@ -6,14 +6,21 @@ normalizeAuthor: mailMessage
 		mailMessage fields at: 'squeak-author-fullname' ifPresent: [^ self]].
 	
 	rawAuthor := mailMessage from. "mt: Is there reply-to in mbox?"
-	"Example: 'boris at dialogue.msu.su (Boris G. Chr. Shingarov)' "
-	rawAuthor := rawAuthor copyFrom: (rawAuthor findString: '(') + 1 to: rawAuthor size - 1.
-	"Example:  'sqrmax@cvtci.com.ar' "
-	rawAuthor := (rawAuthor findTokens: '@')
-		ifEmpty: ['unknown author']
-		ifNotEmpty: [:t | t first].
-	"Example: 'von Löwis, Martin' "
-	rawAuthor := ((rawAuthor findTokens: ',') reversed joinSeparatedBy: ' ') withBlanksTrimmed.
+	rawAuthor ifNotEmpty:
+		[| bracketPos |
+		"Example: 'Stéphane Rollandin <lecteur@zogotounga.net>' "
+		(rawAuthor last = $> and: [(bracketPos := rawAuthor lastIndexOf: $<) > 0])
+			ifTrue: [rawAuthor := rawAuthor first: bracketPos - 1]
+			ifFalse:
+				["Example: 'boris at dialogue.msu.su (Boris G. Chr. Shingarov)' "
+				(bracketPos := rawAuthor indexOf: $() > 0 ifTrue:
+					[rawAuthor := rawAuthor copyFrom: bracketPos + 1 to: rawAuthor size - 1]].
+		"Example:  'sqrmax@cvtci.com.ar' "
+		rawAuthor := (rawAuthor findTokens: '@')
+			ifEmpty: ['unknown author']
+			ifNotEmpty: [:t | t first].
+		"Example: 'von Löwis, Martin' "
+		rawAuthor := ((rawAuthor findTokens: ',') reversed joinSeparatedBy: ' ') withBlanksTrimmed].
 	
 	authorFullName := (rawAuthor copyWithoutAll: '()"'';') withBlanksTrimmed.
 	authorKey := self normalizedAuthorKeyFromName: authorFullName.
