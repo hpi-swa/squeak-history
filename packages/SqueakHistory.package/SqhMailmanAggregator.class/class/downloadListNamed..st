@@ -3,4 +3,4 @@ downloadListNamed: listName
 	
 	^ self
 		downloadListNamed: listName
-		forTimespans: {DateAndTime new "zero" to: DateAndTime now}
+		forTimespans: {(Year year: 1997) asDateAndTime to: DateAndTime now}

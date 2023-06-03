@@ -7,11 +7,15 @@ downloadList: listName fromHyperkitty: spec forTimespans: timespans into: direct
 	
 	"Download messages in chunks to enable progress updates (during downloading and later enumeration). Overhead per chunk download is approx. 150 ms (Windows 10, 40 mbit/s down, 10 mbit/s up, ping 25ms)."
 	allChunkDays := timespans collect: [:timespan |
+		| chunkSize |
+		chunkSize := timespan duration /
+			(100 * (timespan duration / (timespans collect: #duration) sum)).
+		chunkSize := chunkSize clampLow: 7 days high: 365 days.
+		"trade-off between fluent progress and small overhead."
 		exclusiveEnd := timespan end asDate +
 			(timespan end asTime > Time midnight) asBit days "url end parameter is exclusive".
-		"todo: check again for non-midnight timespans"
 		Array streamContents: [:stream |
-			timespan every: 7 days do: [:date |
+			timespan every: chunkSize do: [:date |
 				stream nextPut: date].
 			exclusiveEnd - stream peekLast > 1 nanoSecond ifTrue:
 				[stream nextPut: exclusiveEnd]]].
