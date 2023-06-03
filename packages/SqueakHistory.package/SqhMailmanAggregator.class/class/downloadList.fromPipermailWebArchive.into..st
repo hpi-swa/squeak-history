@@ -1,14 +1,13 @@
 preparation
 downloadList: listName fromPipermailWebArchive: pipermailUrl into: directory
 
-	| response listUrl urlsToMonth |
+	| listUrl content urlsToMonth |
 	self flag: #refactor. "Potential duplication with normal pipermail. Timespans not yet supported."
 	
 	listUrl := pipermailUrl , listName , '/'.
 	
-	response := WebClient httpGet: listUrl.
-	response isSuccess ifFalse: [self error: response status].
-	urlsToMonth := (response content findTokens: '"')
+	content := self httpGet: listUrl.
+	urlsToMonth := (content findTokens: '"')
 		select: [:ea | ea endsWith: 'date.html'].
 	urlsToMonth do: [:urlToMonth |
 		| urlsToMessage |

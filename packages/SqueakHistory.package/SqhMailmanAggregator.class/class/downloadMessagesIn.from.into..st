@@ -1,12 +1,10 @@
 preparation
 downloadMessagesIn: fileName from: mboxUrl into: directory
 
-	| response content |
+	| content |
 	self flag: #performance. "Experiment with parallel downloads."
 	
-	response := WebClient httpGet: mboxUrl.
-	response isSuccess ifFalse: [self error: response status].
-	content := response content.
+	content := self httpGet: mboxUrl.
 	
 	(fileName endsWith: '.gz') ifTrue: [
 		content := content unzipped].
