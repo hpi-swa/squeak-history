@@ -3,6 +3,6 @@ basicRichText
 
 	| message |
 	message := self mailMessage.
-	^ (message respondsTo: #bodyTextFormattedRich) ">= Network-ct.270"
-		ifTrue: [message bodyTextFormattedRich]
+	^ (message respondsTo: #bodyTextFormatted:showAttachments:) ">= Network-ct.278 (Squeak 6.1)"
+		ifTrue: [message bodyTextFormatted: true showAttachments: false]
 		ifFalse: [message bodyTextFormatted]
