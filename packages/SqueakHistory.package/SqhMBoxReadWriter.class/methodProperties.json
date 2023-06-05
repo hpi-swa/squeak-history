@@ -1,8 +1,14 @@
 {
 	"class" : {
+		"exploreFileNamed:" : "ct 5/15/2023 14:53",
+		"fileReaderServicesForFile:suffix:" : "ct 5/9/2023 09:53",
+		"initialize" : "ct 5/9/2023 09:54",
 		"on:" : "mt 2/5/2019 15:26",
 		"onFileNamed:" : "mt 2/5/2019 17:52",
-		"onFileNamed:do:" : "ct 5/20/2021 21:35" },
+		"onFileNamed:do:" : "ct 5/20/2021 21:35",
+		"serviceExploreMessages" : "ct 5/17/2023 20:16",
+		"services" : "ct 5/9/2023 09:52",
+		"unload" : "ct 5/9/2023 09:54" },
 	"instance" : {
 		"allMessages" : "mt 2/7/2019 17:19",
 		"atEnd" : "mt 2/7/2019 17:19",
