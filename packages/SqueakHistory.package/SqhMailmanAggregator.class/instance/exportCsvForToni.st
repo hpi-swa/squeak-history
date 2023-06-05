@@ -25,7 +25,7 @@ exportCsvForToni
 				nextPutAll: (msg fields at: 'squeak-date') printString; nextPut: $;;
 				nextPutAll: (msg fields at: 'squeak-author-fullname'); nextPut: $;;
 				nextPutAll: (msg subject copyReplaceAll: ';' with: ''); nextPut: $;;
-				nextPutAll: (((msg bodyText
+				nextPutAll: (((msg rawText
 								copyReplaceAll: String cr with: '<br>')
 								copyReplaceAll: String lf with: '')
 								copyReplaceAll: ';' with: ','); nextPut: $;;

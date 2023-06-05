@@ -1,0 +1,1 @@
+I wrap a mail message specifically from a pipermail archive, e.g., http://lists.squeakfoundation.org/pipermail/squeak-dev/. Pipermail messages do not contain MIME documents but use their own syntax for separating parts, and attachments are provided as separate files that can be downloaded from the server.

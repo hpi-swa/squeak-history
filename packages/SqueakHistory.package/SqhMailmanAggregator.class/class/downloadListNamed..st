@@ -1,6 +1,6 @@
 preparation
 downloadListNamed: listName
 	
-	self
-		downloadListFrom: (self allLists detect: [:spec | spec value = listName])
-		to: self archivePath.
+	^ self
+		downloadListNamed: listName
+		forTimespans: {(Year year: 1997) asDateAndTime to: DateAndTime now}
