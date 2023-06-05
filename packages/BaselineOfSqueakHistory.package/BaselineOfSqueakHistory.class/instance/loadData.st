@@ -1,8 +1,6 @@
 scripts
 loadData
 
-	self isCI ifTrue: [^ self].
-	
 	#(
 		(10 'Setting archive path')
 		(20 'Downloading mailman archives')
