@@ -42,7 +42,7 @@ downloadList: listName fromHyperkitty: spec forTimespans: timespans into: direct
 				count := count + 1.
 				
 				chunks := {startDay to: endDay}.
-				self excludedDays sorted do: [:excludedDay |
+				(self excludedDaysFor: listName) sorted do: [:excludedDay |
 					chunks := chunks gather: [:chunk |
 						(chunk includes: excludedDay)
 							ifFalse: [{chunk}]
