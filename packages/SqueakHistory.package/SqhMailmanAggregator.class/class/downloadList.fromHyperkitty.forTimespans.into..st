@@ -23,7 +23,8 @@ downloadList: listName fromHyperkitty: spec forTimespans: timespans into: direct
 	downloadChunk := [:startDay :endDay |
 		| startString endString fileName mboxUrl |
 		startString := startDay asDate yyyymmdd.
-		endString := endDay asDate yyyymmdd.
+		endString := (endDay asDate + (endDay asTime > Time midnight) asBit days "fix rounding errors, url end parameter is exclusive")
+			yyyymmdd.
 		
 		fileName := 'hyperkitty_{1}_{3}_{4}.mbox.gz' format:
 			{listName. mailDomain. startString. endString}.
