@@ -1,6 +1,7 @@
 accessing - domain
 replies
-		
+	"For a more efficient caching, see SqhMailmanAggregator class >> #resetCacheForMailReplies."
+	
 	^ self
 		valueOfProperty: #wrapperReplies
 		ifAbsentPut: [
